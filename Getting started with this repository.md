@@ -20,8 +20,11 @@ This concludes the setup!
 Okay, so you've got changes that you've made, and you want to send them up to the main vault so everyone can see them.
 
 *Step 1:* Navigate to your vault
+*Step 2*: (Optional) If there's been changes to the upstream repo, `git pull upstream main`
 *Step 2:* `git add .`
 *Step 3:* `git commit -m "(Name of person) : (A short description of changes)"`
 *Step 4:* `git push -u origin main`
 
-At step 4, your changes are up on your local fork, on GitHub. 
+At step 4, your changes are up on your local fork, on GitHub. Open your browser, open GitHub to your fork. You'll see something like this:
+![[Pasted image 20211223175209.png]]
+^^ Again, remember that this is just an example. Anyway, click on Contribute, Open Pull Request, and merge your pull request. If you're a contributor I know and have added, you can merge it yourself. If you aren't, one of the collaborators will push it for you later.
