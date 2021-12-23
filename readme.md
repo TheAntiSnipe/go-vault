@@ -28,3 +28,9 @@ Okay, so you've got changes that you've made, and you want to send them up to th
 At step 4, your changes are up on your local fork, on GitHub. Open your browser, open GitHub to your fork. You'll see something like this:
 ![[Pasted image 20211223175209.png]]
 ^^ Again, remember that this is just an example. Anyway, click on Contribute, Open Pull Request, and merge your pull request. If you're a contributor I know and have added, you can merge it yourself. If you aren't, one of the collaborators will push it for you later.
+
+And that's about it! I'm not very good at version control myself, so if anyone here has changes and best practices they want me to add to this list, let me know!
+
+Anti out!
+
+---
