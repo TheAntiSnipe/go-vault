@@ -1,13 +1,27 @@
 ### This will be a quick guide into how to get this repository working, and how the workflow for it will look like.
 
-**Starting from scratch**
-First thing you need to do is press Fork, and fork my repo to your end.
+#### Starting from scratch
 
+First thing you need to do is press Fork, and fork my repo to your end.
 The processes that follow, assume that you have SSH set up. If you don't have it set up, follow [this source for it](https://kbroman.org/github_tutorial/pages/first_time.html)
 
-Step 1: Navigate to your folder of choice, and `git clone your-ssh-link-copied-from-clipboard`
+*Step 1:* Navigate to your folder of choice, and `git clone your-ssh-link-copied-from-clipboard`
 	![[Pasted image 20211223174216.png]]
 	^^ Copy from here (this is an example btw)
 
-Step 2: `cd go-vault`
-Step 3: `git remote add upstream https://github.com/TheAntiSnipe/go-vault.git`
+*Step 2:* `cd go-vault`
+*Step 3:* `git remote add upstream https://github.com/TheAntiSnipe/go-vault.git`
+
+This concludes the setup!
+
+---
+#### Working on changes and pushing them to the main vault
+
+Okay, so you've got changes that you've made, and you want to send them up to the main vault so everyone can see them.
+
+*Step 1:* Navigate to your vault
+*Step 2:* `git add .`
+*Step 3:* `git commit -m "(Name of person) : (A short description of changes)"`
+*Step 4:* `git push -u origin main`
+
+At step 4, your changes are up on your local fork, on GitHub. 
