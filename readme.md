@@ -9,7 +9,7 @@ The processes that follow, assume that you have SSH set up. If you don't have it
 	![](https://i.imgur.com/rGe7TkU.png)
 
 
-	^^ Copy from here (this is an example btw)
+^^ Copy from here (this is an example btw)
 
 *Step 2:* `cd go-vault`
 *Step 3:* `git remote add upstream https://github.com/TheAntiSnipe/go-vault.git`
@@ -28,8 +28,7 @@ Okay, so you've got changes that you've made, and you want to send them up to th
 *Step 4:* `git push -u origin main`
 
 At step 4, your changes are up on your local fork, on GitHub. Open your browser, open GitHub to your fork. You'll see something like this:
-![](https://i.imgur.com/RJFKec5.png)
-
+	![](https://i.imgur.com/RJFKec5.png)
 ^^ Again, remember that this is just an example. Anyway, click on Contribute, Open Pull Request, and merge your pull request. If you're a contributor I know and have added, you can merge it yourself. If you aren't, one of the collaborators will push it for you later.
 
 And that's about it! I'm not very good at version control myself, so if anyone here has changes and best practices they want me to add to this list, let me know!
