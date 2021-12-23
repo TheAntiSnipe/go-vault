@@ -31,6 +31,15 @@ At step 4, your changes are up on your local fork, on GitHub. Open your browser,
 	![](https://i.imgur.com/RJFKec5.png)
 ^^ Again, remember that this is just an example. Anyway, click on Contribute, Open Pull Request, and merge your pull request. If you're a contributor I know and have added, you can merge it yourself. If you aren't, one of the collaborators will push it for you later.
 
+
+### An important note: 
+
+.gitignore is set to ignore a folder named `handwritten-and-pdf-references`. If you have handwritten notes or pdf reference books or anything of the kind,
+	1. Make sure it isn't copyrighted stuff that you're putting up, especially in the case of books. This is  apublic repo.
+	2. Put it into the folder with the same name so GitHub doesn't yeet 300MB of notes into the repo (believe me, I've made that mistake, and boy was it an oopsie).
+
+
+
 And that's about it! I'm not very good at version control myself, so if anyone here has changes and best practices they want me to add to this list, let me know!
 
 Anti out!
