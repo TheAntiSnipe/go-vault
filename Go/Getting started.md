@@ -67,5 +67,19 @@ func main() {
 } 
 ```
 
-This is simple enough, but next we have to make a call to `go mod tidy`. Go then handles the adding of the quote module as a requirement, and also adds the `go.sum` file that authenticates the module. For more detail, see [[module authentication in Go]]
+This is simple enough, but next we have to make a call to `go mod tidy`. Go then handles the adding of the quote module as a requirement, and also adds the `go.sum` file that authenticates the module. For more detail, see [[module authentication in Go]].
+
+Here's how that looks when it's all done:
+
+`go.mod`
+```go 
+module helloworld
+go 1.17
+
+require rsc.io/quote/v4 v4.0.1
+require (
+ golang.org/x/text v0.0.0-20170915032832-14c0d48ead0c // indirect
+ rsc.io/sampler v1.3.0 // indirect
+)```
+
 Tags: #go, #backend
