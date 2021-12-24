@@ -69,7 +69,8 @@ Another thing to note is the Pythonic auto-formatting. Just a sidenote. Other th
 Pretty standard here, we've seen it in [[Getting started]]. Here's the process:
 1. Make a directory named `hello`... Well, it can be named anything. Anyway, make sure it's OUTSIDE `greetings`. Go doesn't like nested projects for obvious reasons.
 2. Initialize it: `go mod init example.com/hello`
-3. Write some code into a file named `hello.go`
+3. Write some code into a file named 
+`hello.go`
 ```go
 package main
 
@@ -84,6 +85,18 @@ Easy enough, but remember, <mark style="background: undefined;">example.com/gree
 4. We need to make sure Go gets the memo and knows where to look for it.
 ```
 go mod edit -replace example.com/greetings=../greetings
+go mod tidy
 ```
-Looking at the `go.mod` file now, we see this
+(Recall from [[Getting started]] that `go mod tidy` is responsible for updating the `go.mod `)
+Looking at the `go.mod` file now, we see this:
+`go.mod`
+```go
+module example.com/hello
+go 1.17
+
+replace example.com/greetings => ../greetings
+require example.com/greetings v0.0.0-00010101000000-000000000000
+```
+
+So Go now knows where to look for the greetings module!
 Tags: #go, #modules, #function-standard
