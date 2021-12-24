@@ -42,5 +42,16 @@ message:=fmt.Sprintf("Hello, %s!", name)
 ```
 
 Okay, here we go. First things first, `:=` implies an assignment. If you use `=`, you need to have declared the variable first. `:=` is what you use when you declare AND assign at the same time.
+
+Alternatively, another angle of attack here would be to write the code as:
+
+
+
 Now what's `fmt.Sprintf`? Here's the reference I used to get the answer: [fmt package - fmt - pkg.go.dev](https://pkg.go.dev/fmt)
 Here's the short answer: It's the only one of the three functions that returns a string. The others write directly to a standard output and return error codes and byte lengths. For the long answer, check out [[fmt print routines]].
+
+Another thing to note is the Pythonic auto-formatting. Just a sidenote. Other than that, we can move on.
+
+
+
+Tags: #go, #modules, #function-standard
