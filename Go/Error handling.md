@@ -19,3 +19,5 @@ func Hello(name string) (string,error) {
 ```
 
 **Code anatomy**
+
+The `errors` package is another one of the inbuilt packages that comes with Go. It introduces the `error` datatype and allows you to throw an error back with `errors.New()`. Here, we throw back a string `"empty name"`. 
