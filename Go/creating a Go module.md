@@ -71,8 +71,19 @@ Pretty standard here, we've seen it in [[Getting started]]. Here's the process:
 2. Initialize it: `go mod init example.com/hello`
 3. Write some code into a file named `hello.go`
 ```go
+package main
 
+import("fmt"
+	   "example.com/greetings")
+func main() {
+	message:=Hello("it's ya boi!")
+	fmt.Println(message)
+}
 ```
-
-
+Easy enough, but remember, <mark style="background: undefined;">example.com/greetings</mark> does not actually exist! It isn't hosted and definitely not downloadable! 
+4. We need to make sure Go gets the memo and knows where to look for it.
+```
+go mod edit -replace example.com/greetings=../greetings
+```
+Looking at the `go.mod` file now, we see this
 Tags: #go, #modules, #function-standard
