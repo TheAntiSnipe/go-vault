@@ -43,4 +43,9 @@ message:=fmt.Sprintf("Hello, %s!", name)
 
 Okay, here we go. First things first, `:=` implies an assignment. If you use `=`, you need to have declared the variable first. `:=` is what you use when you declare AND assign at the same time.
 Now what's `fmt.Sprintf`? Here's the reference I used to get the answer: [fmt package - fmt - pkg.go.dev](https://pkg.go.dev/fmt)
-This is kinda funny, get this: `fmt.Sprintf` is just a way to give a C-like flavor to your formatting. 
+
+So this is where it gets funky. Let's start with the three major types of print, and I get the feeling I'll be updating this at some point, so hang a (WIP) on this.
+
+You've got:
+- `Fprint`
+	- `Fprint` writes to `w`. `w` is any `io.Writer` object. Pythonic style of writing, but remember that `w` is the first argument. If you assig
