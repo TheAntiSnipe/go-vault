@@ -41,4 +41,6 @@ The second interesting thing that we haven't seen so far is the variable declara
 message:=fmt.Sprintf("Hello, %s!", name)
 ```
 
-Okay, here we go. First things first, `:=` implies an assignment. If you use `=`, you need to have declared the variable first. `:=` is what you
+Okay, here we go. First things first, `:=` implies an assignment. If you use `=`, you need to have declared the variable first. `:=` is what you use when you declare AND assign at the same time.
+Now what's `fmt.Sprintf`? Here's the reference I used to get the answer: [fmt package - fmt - pkg.go.dev](https://pkg.go.dev/fmt)
+This is kinda funny, get this: `fmt.Sprintf` is just a way to give a C-like flavor to your formatting. 
