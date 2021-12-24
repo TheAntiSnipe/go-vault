@@ -92,5 +92,6 @@ rsc.io/quote/v4 v4.0.1/go.mod h1:w/DafQky66grMesu3uPhdDMS3knhBippwwemZtMOyCI=
 rsc.io/sampler v1.3.0 h1:7uVkIFmeBqHfdjD+gZwtXXI+RODJ2Wc4O7MPEh/QiW4=
 rsc.io/sampler v1.3.0/go.mod h1:T1hPZKmBbMNahiBKFy5HrXp6adAjACjK9JXDnKaTXpA=
 ```
+Again, like we discussed in [[module authentication in Go]], this is simply a whole lotta hashes that help go check for tampering when `go mod verify` is called.
 
 Tags: #go, #backend
