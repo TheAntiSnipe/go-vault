@@ -108,6 +108,7 @@ require example.com/greetings v0.0.0-00010101000000-000000000000
 ```
 
 So Go now knows where to look for the greetings module when running!
-
+Note that if we had the module hosted, `go mod tidy` would tag it as per the version numbering it found. For more information about this, refer to [Module version numbering - The Go Programming Language](https://go.dev/doc/modules/version-numbers)
+Next, following the tutorial, we move on to [[Error handling]]
 
 Tags: #go, #modules, #function-standard
