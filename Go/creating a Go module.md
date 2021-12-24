@@ -87,8 +87,17 @@ Easy enough, but remember, <mark style="background: undefined;">example.com/gree
 go mod edit -replace example.com/greetings=../greetings
 go mod tidy
 ```
-(Recall from [[Getting started]] that `go mod tidy` is responsible for updating the `go.mod `)
-Looking at the `go.mod` file now, we see this:
+Recall from [[Getting started]] that `go mod tidy` is responsible for syncing the dependancies. Changes don't happen until you run that!
+Before running `go mod tidy`:
+`go.mod`
+```go
+module example.com/hello
+go 1.17
+
+replace example.com/greetings => ../greetings
+```
+
+After running `go mod tidy`:
 `go.mod`
 ```go
 module example.com/hello
@@ -98,5 +107,7 @@ replace example.com/greetings => ../greetings
 require example.com/greetings v0.0.0-00010101000000-000000000000
 ```
 
-So Go now knows where to look for the greetings module!
+So Go now knows where to look for the greetings module when running!
+
+
 Tags: #go, #modules, #function-standard
