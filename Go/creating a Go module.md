@@ -22,3 +22,23 @@ func Hello(name string) string {
  return message
 }
 ```
+
+**Code anatomy**
+Let's take a look at this function declaration, seeing as how this is our first time declaring one:
+```go
+func Hello(name string) string {
+ message := fmt.Sprintf("Hello, %s!", name)
+ return message
+}
+```
+The first thing we notice is the tokens:
+`func` - Initializes the function
+`name string` - The variable `name` is a `string`.
+`func Hello(name string) string {` - The function's name is Hello, it accepts a string, and calls it `name` within its scope. It returns a string datatype to the caller.
+
+The second interesting thing that we haven't seen so far is the variable declaration syntax: 
+```go
+message:=fmt.Sprintf("Hello, %s!", name)
+```
+
+Okay, here we go. First things first, `:=` implies an assignment. If you use `=`, you need to have declared the variable first. `:=` is what you
