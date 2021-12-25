@@ -54,4 +54,17 @@ Anyway!
 Two things we see right off the bat are the two new module imports. `"math/rand"` and `"time"` are both modules we need to use... Well, not `"time"`, actually, that's only there to seed the random distribution we're using. We can just use something like, say `42` or whatever we want here.
 
 Next up, the `init` function. This is another one of those functions that Go runs by itself. It runs right after the global vars of the code are assigned. This is where we assign the random seed. This might be of interest in the context of init: [Effective Go - The Go Programming Language](https://go.dev/doc/effective_go#init).
-Other than that, there's the function we use within the random seed declaration, the one about time... `time.Now().UnixNano()`. Unix is a well-known timescale that measures how much time has passed since January 1, 1970
+Other than that, there's the function we use within the random seed declaration, the one about time... `time.Now().UnixNano()`. Unix is a well-known timescale that measures how much time has passed since January 1, 1970. When you say `time.Now.UnixNano()`, you're basically asking the machine how much time has passed since that time, in nanoseconds. Other than that, further reading can be done in [time package - time - pkg.go.dev](https://pkg.go.dev/time#Now)
+
+Another object of interest is the declaration of a slice.
+
+```go
+
+randomGreeting := []string{"Player %v has entered the game!", 
+						   "Do you not know who this is? It's %v, slayer of demons, bane of the Fallen! You shall kneel before them!", 
+						   "May the force be with you, %v"}
+```
+Okay, so here, we see a declaration template for a slice: An array of strings that, on initialization, contains these strings seen above. A weird declaration, in fact an opposite of how we do it in CPP, but pretty easy to get used to. General template:
+```go
+varname := [] 
+```
