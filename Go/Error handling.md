@@ -57,4 +57,4 @@ func main() {
 ```
 
 **Code anatomy**
-We start with the first change that we just made, the `"log"` import. 
+We start with the first change that we just made, the `"log"` import. There's a little bit going on here  with `log.SetPrefix()`... Basically, whatever is in the brackets i
