@@ -12,7 +12,9 @@ The processes that follow, assume that you have SSH set up. If you don't have it
 ^^ Copy from here (this is an example btw)
 
 *Step 2:* `cd go-vault`
+
 *Step 3:* `git remote add upstream https://github.com/TheAntiSnipe/go-vault.git`
+
 
 This concludes the setup!
 
@@ -22,10 +24,15 @@ This concludes the setup!
 Okay, so you've got changes that you've made, and you want to send them up to the main vault so everyone can see them.
 
 *Step 1:* Navigate to your vault
+
 *Step 2*: (Optional) If there's been changes to the upstream repo, `git pull upstream main`
+
 *Step 2:* `git add .`
+
 *Step 3:* `git commit -m "(Name of person) : (A short description of changes)"`
+
 *Step 4:* `git push -u origin main`
+
 
 At step 4, your changes are up on your local fork, on GitHub. Open your browser, open GitHub to your fork. You'll see something like this:
 	![](https://i.imgur.com/RJFKec5.png)
