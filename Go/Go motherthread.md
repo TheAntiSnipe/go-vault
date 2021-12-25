@@ -2,7 +2,7 @@
 
 [[Getting started]]
 [[creating a Go module]]
-[[Adding randomness]]
+[[An introduction to slices and randomness]]
 
 # Peripheral reading
 ## fmt
