@@ -58,5 +58,13 @@ func main() {
 
 **Code anatomy**
 We start with the first change that we just made, the `"log"` import. There's a little bit going on here  with `log.SetPrefix()`... Basically, whatever is in the brackets will be printed. It's a prefix. Duh.
+
 Anyway, next comes `log.SetFlags(0)`. In this context, the `0` means we don't want any other logging data. There's a lot of options here. In fact, `log.SetFlags(0)` is about five times slower than the most optimal way to set logging to off. [logging - How to disable a log.Logger - Stack Overflow](https://stackoverflow.com/questions/10571182/how-to-disable-a-log-logger) for more. Also, some more code examples of working with the logging system in general: [Golang SetFlags Examples, log.SetFlags Golang Examples - HotExamples](https://golang.hotexamples.com/examples/log/-/SetFlags/golang-setflags-function-examples.html)
 
+Then comes our little error pickup from the `greetings.Hello()` package. As seen above, the way we do it is very pythonic, easy to understand.
+
+If the result stored in `err` is `nil` (`nil` is basically the Go version of Python's `None`), we don't care since no issues happened. Otherwise, we log the error using `log.Fatal(err)`. `log.Fatal()` is equivalent to a `Print()` followed by an `os.Exit(1)` by the way.
+
+And that about wraps it up for error handling!
+
+Tags: #go , #error-handling, #backend 
