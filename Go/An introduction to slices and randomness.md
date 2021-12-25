@@ -46,6 +46,9 @@ C:\Users\TheAntiSnipe\Documents\Death Valley\hello>go run .
 Do you not know who this is? It's Paws, slayer of demons, bane of the Fallen! You shall kneel before them!
 ```
 ![](https://static.boredpanda.com/blog/wp-content/uploads/2020/03/5e6782b89ee19_1nyn34drl0l31__700.jpg)
+*Such paws, much scary, wow, am kneel*
+
 Anyway!
 
 **Code anatomy**
+Two things we see right off the bat are the two new module imports. `"math/rand"` and `"time"` are both modules we need to use... Well, not time, actually, that's only there to seed the random distribution we're using. W
