@@ -51,4 +51,7 @@ Do you not know who this is? It's Paws, slayer of demons, bane of the Fallen! Yo
 Anyway!
 
 **Code anatomy**
-Two things we see right off the bat are the two new module imports. `"math/rand"` and `"time"` are both modules we need to use... Well, not time, actually, that's only there to seed the random distribution we're using. W
+Two things we see right off the bat are the two new module imports. `"math/rand"` and `"time"` are both modules we need to use... Well, not `"time"`, actually, that's only there to seed the random distribution we're using. We can just use something like, say `42` or whatever we want here.
+
+Next up, the `init` function. This is another one of those functions that Go runs by itself. It runs right after the global vars of the code are assigned. This is where we assign the random seed. This might be of interest in the context of init: [Effective Go - The Go Programming Language](https://go.dev/doc/effective_go#init).
+Other than that, there's the function we use within the random seed declaration, the one about time... ``
