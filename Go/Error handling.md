@@ -57,4 +57,6 @@ func main() {
 ```
 
 **Code anatomy**
-We start with the first change that we just made, the `"log"` import. There's a little bit going on here  with `log.SetPrefix()`... Basically, whatever is in the brackets i
+We start with the first change that we just made, the `"log"` import. There's a little bit going on here  with `log.SetPrefix()`... Basically, whatever is in the brackets will be printed. It's a prefix. Duh.
+Anyway, next comes `log.SetFlags(0)`. In this context, the `0` means we don't want any other logging data. There's a lot of options here. In fact, `log.SetFlags(0)` is about five times slower than the most optimal way to set logging to off. [logging - How to disable a log.Logger - Stack Overflow](https://stackoverflow.com/questions/10571182/how-to-disable-a-log-logger) for more. Also, some more code examples of working with the logging system in general: [Golang SetFlags Examples, log.SetFlags Golang Examples - HotExamples](https://golang.hotexamples.com/examples/log/-/SetFlags/golang-setflags-function-examples.html)
+
