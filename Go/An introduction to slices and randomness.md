@@ -66,5 +66,7 @@ randomGreeting := []string{"Player %v has entered the game!",
 ```
 Okay, so here, we see a declaration template for a slice: An array of strings that, on initialization, contains these strings seen above. A weird declaration, in fact an opposite of how we do it in CPP, but pretty easy to get used to. General template:
 ```go
-varname := [] 
+varname := [numberOfElements]datatype{elements} 
 ```
+
+
