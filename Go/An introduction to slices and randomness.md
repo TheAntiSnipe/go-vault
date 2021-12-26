@@ -74,4 +74,6 @@ Then we return one of those indices randomly:
 ```go
 return randomGreeting[rand.Intn(len(randomGreeting))]
 ```
+So we choose a random natural integer in the range 0 to the length of the randomGreeting array,
 
+Tags: #go , #randomness, #slices-go, #backend 
