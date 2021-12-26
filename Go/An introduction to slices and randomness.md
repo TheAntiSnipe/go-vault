@@ -69,4 +69,9 @@ Okay, so here, we see a declaration template for a slice: An array of strings th
 varname := [numberOfElements]datatype{elements} 
 ```
 
+Then we return one of those indices randomly:
+
+```go
+return randomGreeting[rand.Intn(len(randomGreeting))]
+```
 
