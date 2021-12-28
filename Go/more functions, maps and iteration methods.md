@@ -157,5 +157,27 @@ func main() {
 }
 ```
 
+**Code anatomy**
+
 There's nothing really new going on in `hello.go` once we understand what's happening in `greetings.go`.  So what's up? Well, first off, let's focus on the `GreetMultiple()` function:
 
+```go
+func GreetMultiple(names []string) (map[string]string, error) {
+    // Note how the map is formatted here
+    outputMap := make(map[string]string)
+    // Also note the new loop format they use here
+    for _, name := range names {
+        message, err := Hello(name)
+        if err != nil {
+            return nil, err
+        }
+        // Finally, see how outputMap is indexed in name
+        outputMap[name] = message
+    }
+    return outputMap, nil
+}
+```
+ The first thing we notice is the return type: We're using a return type of `map[string]string`. It's a map, with string indices, and string elements. The second thing is how it's declared: 
+ ```go
+ outputMap := make(map[string]string)
+```
