@@ -59,23 +59,26 @@ import (
 )
 
 func main() {
+	// Setting up log
 	log.SetPrefix("greetings: ")
 	log.SetFlags(0)
-
+	// Demo of standard Hello function
 	message, err := greetings.Hello("Paws")
 	if err != nil {
 		log.Fatal(err)
 	}
 	fmt.Println(message)
-	
+	// Demo of GreetMultiple function
 	nameList := []string{"Atharva", "Devam", "Mihir", "Yash"}
 	messages, err := greetings.GreetMultiple(nameList)
 	if err != nil {
 		log.Fatal(err)
 	}
-	
 	for i := 0; i < len(messages); i++ {
 		fmt.Println(messages[i])
 	}
 }
 }```
+
+The loops here are pretty crude because I just straight up used the C format. Anyway, it's pretty easy to come up with a working solution to the given problem statement with a basic source code. However, here's the more elegant way to do it:
+
