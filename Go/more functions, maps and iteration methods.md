@@ -5,4 +5,45 @@ I decided to handle this problem statement by myself first, going in blind. The 
 
 Right, so first off, I need to write a new function, and I need to run a loop over all the names and run the Hello function over each. So I designed the code like this:
 
-``
+`greetings.go`
+```go
+package greetings
+
+import (
+ "errors"
+ "fmt"
+ "math/rand"
+ "time"
+)
+
+func Hello(name string) (string, error) {
+
+	if name == "" {
+		 return "", errors.New("empty name")
+	}
+
+	message := fmt.Sprintf(RandomGreet(), name)
+	return message, nil
+}
+
+func GreetMultiple(names []string) ([]string, error) {
+	outputString := []string{}
+	for i := 0; i < len(names); i++ {
+		output, err := Hello(names[i])
+		outputString = append(outputString, output)
+		if err != nil {
+			return outputString, err
+		}
+	}
+	return outputString, nil
+}
+
+func init() {
+ rand.Seed(time.Now().UnixNano())
+}
+
+func RandomGreet() string {
+ randomGreeting := []string{"Player %v has entered the game!", "Do you not know who this is? It's %v, slayer of demons, bane of the Fallen! You shall kneel before them!", "May the force be with you, %v"}
+ return randomGreeting[rand.Intn(len(randomGreeting))]
+}
+```
