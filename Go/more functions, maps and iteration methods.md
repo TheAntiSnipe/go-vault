@@ -157,4 +157,5 @@ func main() {
 }
 ```
 
-There's nothing really new going on in `hello.go` once we understand what's happening in 
+There's nothing really new going on in `hello.go` once we understand what's happening in `greetings.go`.  So what's up? Well, first off, let's focus on the `GreetMultiple()` function:
+
