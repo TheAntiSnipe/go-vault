@@ -47,3 +47,35 @@ func RandomGreet() string {
  return randomGreeting[rand.Intn(len(randomGreeting))]
 }
 ```
+
+`hello.go`
+```go
+package main
+
+import (
+ "fmt"
+ "log"
+ "example.com/greetings"
+)
+
+func main() {
+	log.SetPrefix("greetings: ")
+	log.SetFlags(0)
+
+	message, err := greetings.Hello("Paws")
+	if err != nil {
+		log.Fatal(err)
+	}
+	fmt.Println(message)
+	
+	nameList := []string{"Atharva", "Devam", "Mihir", "Yash"}
+	messages, err := greetings.GreetMultiple(nameList)
+	if err != nil {
+		log.Fatal(err)
+	}
+	
+	for i := 0; i < len(messages); i++ {
+		fmt.Println(messages[i])
+	}
+}
+}```
