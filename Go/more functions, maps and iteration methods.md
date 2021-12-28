@@ -94,32 +94,67 @@ import (
  )
   
 func Hello(name string) (string, error) {
- if name == "" {
- return "", errors.New("empty name")
- }
- message := fmt.Sprintf(RandomGreet(), name)
- return message, nil
+	if name == "" {
+		return "", errors.New("empty name")
+	}
+	message := fmt.Sprintf(RandomGreet(), name)
+	return message, nil
  }
   
 func GreetMultiple(names []string) (map[string]string, error) {
- outputMap := make(map[string]string)
- for _, name := range names {
- message, err := Hello(name)
- if err != nil {
- return nil, err
- }
- outputMap[name] = message
- }
- return outputMap, nil
- }
+	// Note how the map is formatted here
+	outputMap := make(map[string]string)
+	// Also note the new loop format they use here
+	for _, name := range names {
+		message, err := Hello(name)
+		if err != nil {
+			return nil, err
+		}
+		// Finally, see how outputMap is indexed in name
+		outputMap[name] = message
+	}
+	return outputMap, nil
+}
   
 func init() {
- rand.Seed(time.Now().UnixNano())
- }
+	rand.Seed(time.Now().UnixNano())
+}
   
 func RandomGreet() string {
- randomGreeting := []string{"Player %v has entered the game!", "Do you not know who this is? It's %v, slayer of demons, bane of the Fallen! You shall kneel before them!", "May the force be with you, %v"}
-  
- return randomGreeting[rand.Intn(len(randomGreeting))]
- }
+	randomGreeting := []string{"Player %v has entered the game!", "Do you not know who this is? It's %v, slayer of demons, bane of the Fallen! You shall kneel before them!", "May the force be with you, %v"}
+	
+	return randomGreeting[rand.Intn(len(randomGreeting))]
+}
 ```
+
+`hello.go`
+```go
+package main
+
+import (
+    "fmt"
+    "log"
+
+    "example.com/greetings"
+)
+
+func main() {
+    log.SetPrefix("greetings: ")
+    log.SetFlags(0)
+    message, err := greetings.Hello("Paws")
+    if err != nil {
+        log.Fatal(err)
+    }
+    fmt.Println(message)
+    nameList := []string{"Atharva", "Devam", "Mihir", "Yash"}
+    messages, err := greetings.GreetMultiple(nameList)
+    if err != nil {
+        log.Fatal(err)
+    }
+    for _, name := range nameList {
+        fmt.Println(messages[name])
+    }
+}
+```
+
+There's nothing really new going on in `hello.go` once we understand what's happening in 
