@@ -191,4 +191,8 @@ for _, name := range names {
             return nil, err
         }
 ```
-Right, so what's going on here? First off, the `_`, it's pretty standard stuff. You name a variable that in Go, it is automatically ignored. 
+Right, so what's going on here? First off, the `_`, it's pretty standard stuff. You name a variable that in Go, it is automatically ignored. Now what exactly is going on here? Remember the Python `enum`? Yeah, that's basically what `range` is in Go: Index, followed by content. We only want the content, so we assign the index to the blank identifier `_`. Other than that, there's nothing really fancy going on in the loop here. Oh, though, something pretty cool here:
+```go
+outputMap[name] = message
+```
+Right, so what's this? Apparently maps in Go work in a simila
