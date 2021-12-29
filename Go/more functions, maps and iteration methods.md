@@ -181,4 +181,14 @@ func GreetMultiple(names []string) (map[string]string, error) {
  ```go
  outputMap := make(map[string]string)
 ```
-Alright, so what's `make()`? Slightly long discussion, go to [[data allocation]]
+Alright, so what's `make()`? Slightly long discussion, go to [[data allocation]]. TL;DR you use `make()` if you want to initialize an empty map, slice or channel, `new()` works for all other usecases but then again, it's up to you.
+
+Right, so you make a new map, and now you fill it up. The loop syntax is new too, let's take a look at that:
+```go
+for _, name := range names {
+        message, err := Hello(name)
+        if err != nil {
+            return nil, err
+        }
+```
+Right, so what's going on here? First off, the `_`, it's pretty standard stuff. You name a variable that in Go, it is automatically ignored. 

@@ -17,4 +17,4 @@ You've got:
 	- Writes directly to os.Stdout, no questions asked.
 	- Has the same Python-like formatting other than that.
 
-Tags: #go, #print, #os-Stdout
+Tags: #go, #print, #os-Stdout, #peripheral-reading 
