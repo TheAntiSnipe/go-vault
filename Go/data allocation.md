@@ -102,4 +102,8 @@ Back to making personal notes.
 `make()`
 - Only deals with slices, maps and channels. 
 - A key point about the inner workings of Go: These data structures are separate from the `new()` type because these types represent "references to data structures that must be initialized before use". 
-- So for example consider slices. Slices are represented by three references: 
+- So for example consider slices. Slices are represented by three references: the *pointer to the data inside an array*, the *length* of the slice, and the *capacity*. Until these items are initialized, the slice is `nil`.
+
+So, in [[more functions, maps and iteration methods]], the reason we use `make()` in the example is that we're declaring a map, which cannot be initialized using `new()`.
+
+Tags: #go, #backend , #memory-allocation, #peripheral-reading

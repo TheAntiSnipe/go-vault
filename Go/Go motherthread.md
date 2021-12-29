@@ -14,5 +14,8 @@
 ## cmd
 [[List of things in go help]]
 
+## malloc
+[[data allocation]]
+
 
 Tags: #go, #backend
