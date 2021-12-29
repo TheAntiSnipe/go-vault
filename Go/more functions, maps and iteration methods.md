@@ -181,3 +181,4 @@ func GreetMultiple(names []string) (map[string]string, error) {
  ```go
  outputMap := make(map[string]string)
 ```
+Alright, so what's `make()`? Well, Go has two types of memory allocation primitives. These are `new(type)` and `make(type,args)`. 
