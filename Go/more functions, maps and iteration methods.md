@@ -201,4 +201,6 @@ That wraps it up with `greetings.go`, and `main.go`.
 
 And that's how you handle multiple functions and maps! Also, that wraps up the idea of maps.
 
+Next, we're gonna run some tests in [[setting up tests]]
+
 Tags: #maps-go, #go, #backend , #iteration-methods
