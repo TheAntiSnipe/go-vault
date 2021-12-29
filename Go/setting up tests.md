@@ -52,4 +52,10 @@ func TestHelloName(t *testing.T) {
 	}
 }
 ```
-Here, we see a testing object `` in the declaration and no return type. A return is not needed by Go in this context: The test object is responsible for returning stuff when a test fails or passes.
+Here, we see a testing object `t *testing.T` in the declaration and no return type. A return is not needed by Go in this context: The test object is responsible for returning stuff when a test fails or passes.
+The next thing that we see is that we have a variable `want` declared as follows:
+```go
+want := regexp.MustCompile(`\b` + name + `\b`)
+```
+`regex.MustCompile()` is a function that allows us to hold a compiled regular expression. Having a name at any point in the string defines a successful run for us. So we store the precompiled expression in the variable want.
+
