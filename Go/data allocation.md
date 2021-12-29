@@ -97,5 +97,8 @@ Back to making personal notes.
 - Does not initialize memory, but rather zeroes it out. 
 - Returns the address of the allocated memory. 
 - The zeroing makes sense in the perspective of the data structure, makes it easy to work with.
-- There's some constructur stuff in there that'll probably come into play later.
-- 
+- There's some constructor stuff in there that'll probably come into play later.
+
+`make()`
+- Only deals with slices, maps and channels. 
+- A key point about the inner workings of Go: These data structures are separate from the `new()` type because 
