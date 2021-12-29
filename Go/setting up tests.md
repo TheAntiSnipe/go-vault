@@ -9,45 +9,32 @@ Starting off, let's take a look at a test file. We write it in the `greetings` f
 ```go
 package greetings
 
-  
-
 import (
-
- "regexp"
-
- "testing"
-
+	"regexp"
+	"testing"
 )
 
-  
-
 func TestHelloName(t *testing.T) {
-
- name := "Mihir"
-
- want := regexp.MustCompile(`\b` + name + `\b`)
-
- msg, err := Hello("Mihir")
-
- if !want.MatchString(msg) || err != nil {
-
- t.Fatalf(`Hello("Gladys") = %q %v, want match for %#q, nil`, msg, err, want)
-
- }
-
+	name := "Mihir"
+	want := regexp.MustCompile(`\b` + name + `\b`)
+	msg, err := Hello("Mihir")
+	if !want.MatchString(msg) || err != nil {
+		t.Fatalf(`Hello("Gladys") = %q %v, want match for %#q, nil`, msg, err, want)
+	}
 }
-
-  
 
 func TestHelloEmpty(t *testing.T) {
-
- msg, err := Hello("")
-
- if msg != "" || err == nil {
-
- t.Fatalf(`Hello("") = %q, %v, want match for "", error`, msg, err)
-
- }
-
+	msg, err := Hello("")
+	if msg != "" || err == nil {
+		t.Fatalf(`Hello("") = %q, %v, want match for "", error`, msg, err)
+	}
 }
+
 ```
+
+**Code anatomy**
+
+Here, the first thing we notice are the imports. `import("regexp" "testing")` import the inbuilt regex and testing modules. 
+Next, we see the two test functions, `TestHelloName()` and `TestHelloEmpty()`. These two functions are the two testcases we have defined.
+> A short note on Go convention
+> Go convention dictates that test functions must be named according to the scheme Test<what-is-t>
