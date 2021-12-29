@@ -94,4 +94,8 @@ Remember that `make` applies only to maps, slices and channels and does not retu
 Back to making personal notes.
 
 `new()`
-- Does not initialize memory, but rather zeroes it out.
+- Does not initialize memory, but rather zeroes it out. 
+- Returns the address of the allocated memory. 
+- The zeroing makes sense in the perspective of the data structure, makes it easy to work with.
+- There's some constructur stuff in there that'll probably come into play later.
+- 
