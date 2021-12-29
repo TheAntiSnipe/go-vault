@@ -37,4 +37,19 @@ func TestHelloEmpty(t *testing.T) {
 Here, the first thing we notice are the imports. `import("regexp" "testing")` import the inbuilt regex and testing modules. 
 Next, we see the two test functions, `TestHelloName()` and `TestHelloEmpty()`. These two functions are the two testcases we have defined.
 > A short note on Go convention
-> Go convention dictates that test functions must be named according to the scheme Test<what-is-t>
+> Go convention dictates that test functions must be named according to the scheme Test*Description*().
+
+
+Okay, onto the meat and potatoes. Let's take a closer look at `TestHelloName()`. 
+
+```go
+func TestHelloName(t *testing.T) {
+	name := "Mihir"
+	want := regexp.MustCompile(`\b` + name + `\b`)
+	msg, err := Hello("Mihir")
+	if !want.MatchString(msg) || err != nil {
+		t.Fatalf(`Hello("Gladys") = %q %v, want match for %#q, nil`, msg, err, want)
+	}
+}
+```
+Here, we see a testing object `` in the declaration and no return type. A return is not needed by Go in this context: The test object is responsible for returning stuff when a test fails or passes.
