@@ -195,4 +195,10 @@ Right, so what's going on here? First off, the `_`, it's pretty standard stuff. 
 ```go
 outputMap[name] = message
 ```
-Right, so what's this? Apparently maps in Go work in a simila
+Right, so what's this? Apparently maps in Go work in a similar vein to defaultdicts in Python. More on this later, maybe? (WIP)
+
+That wraps it up with `greetings.go`, and `main.go`. 
+
+And that's how you handle multiple functions and maps! Also, that wraps up the idea of maps.
+
+Tags: #maps-go, #go, #backend , #iteration-methods
