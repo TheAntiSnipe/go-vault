@@ -101,4 +101,5 @@ Back to making personal notes.
 
 `make()`
 - Only deals with slices, maps and channels. 
-- A key point about the inner workings of Go: These data structures are separate from the `new()` type because 
+- A key point about the inner workings of Go: These data structures are separate from the `new()` type because these types represent "references to data structures that must be initialized before use". 
+- So for example consider slices. Slices are represented by three references: 
