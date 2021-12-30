@@ -1,5 +1,6 @@
 # Key components
 
+## Introductory area
 [[Getting started]]
 [[creating a Go module]]
 [[Error handling]]
@@ -7,6 +8,9 @@
 [[more functions, maps and iteration methods]]
 [[setting up tests]]
 [[Building and installation]]
+
+## The API tutorial
+
 
 # Peripheral reading
 ## fmt
