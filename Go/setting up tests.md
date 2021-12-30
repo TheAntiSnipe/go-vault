@@ -58,4 +58,8 @@ The next thing that we see is that we have a variable `want` declared as follows
 want := regexp.MustCompile(`\b` + name + `\b`)
 ```
 `regex.MustCompile()` is a function that allows us to hold a compiled regular expression. Having a name at any point in the string defines a successful run for us. So we store the precompiled expression in the variable want.
+The rest of the code is straightforward. `TestHelloEmpty()` is similarly trivial to understand.
 
+When running a test, we use `go test` for a testing output that tells us whether the test passed or failed, and a `go test -v` command for a more verbose testing output.
+
+Tags: #go, #testing, #regex
