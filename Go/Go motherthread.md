@@ -2,9 +2,10 @@
 
 [[Getting started]]
 [[creating a Go module]]
+[[Error handling]]
 [[An introduction to slices and randomness]]
 [[more functions, maps and iteration methods]]
-[[setting up tests]](wip)
+[[setting up tests]]
 
 # Peripheral reading
 ## fmt
