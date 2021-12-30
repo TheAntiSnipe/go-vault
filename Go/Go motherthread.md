@@ -6,6 +6,7 @@
 [[An introduction to slices and randomness]]
 [[more functions, maps and iteration methods]]
 [[setting up tests]]
+[[Building and installation]]
 
 # Peripheral reading
 ## fmt
