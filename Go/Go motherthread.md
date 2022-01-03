@@ -8,6 +8,7 @@
 [[more functions, maps and iteration methods]]
 [[setting up tests]]
 [[Building and installation]]
+[[Writing a RESTful API with Gin]]
 
 ## The API tutorial
 
