@@ -79,4 +79,8 @@ type album struct {
 	Price  float64 `json:"price"`
 }
 ```
-So this is a structure declaration, done in a similar way to C, but inverted in form as usual. 
+So this is a structure declaration, done in a similar way to C, but inverted in form as usual. Now, here's the rabbithole: What's going on with the 
+```go
+`json:"id"`
+```
+part? 
