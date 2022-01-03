@@ -79,3 +79,4 @@ type album struct {
 	Price  float64 `json:"price"`
 }
 ```
+So this is a structure declaration, done in a similar way to C, but inverted in form as usual. 
