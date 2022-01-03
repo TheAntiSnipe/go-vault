@@ -67,4 +67,15 @@ func main() {
 As we have so far, we'll start off the top and work our way down.
 
 **Code anatomy**
-The first thing we notice is the two imports. By this time, we know what's up. `net/http` allows us to use the various HTTP status codes that we're gonna be using down the line. `github.com/gin-gonic/gin` links to the GitHub repo for the gin library, which is what we're gonna see a lot of, now. What's Gin though? 
+The first thing we notice is the two imports. By this time, we know what's up. `net/http` allows us to use the various HTTP status codes that we're gonna be using down the line. `github.com/gin-gonic/gin` links to the GitHub repo for the gin library, which is what we're gonna see a lot of, now. What's Gin though? The short version: An extremely fast web framework written in Go that has the highest routing speed benchmark scores of any web framework as of 1/3/2022.
+
+The line after that is pretty cool:
+
+```go
+type album struct {
+	ID     string  `json:"id"`
+	Title  string  `json:"title"`
+	Artist string  `json:"artist"`
+	Price  float64 `json:"price"`
+}
+```
