@@ -26,5 +26,7 @@
 ## malloc
 [[data allocation]]
 
+## REST
+[[RESTful APIs]]
 
 Tags: #go, #backend

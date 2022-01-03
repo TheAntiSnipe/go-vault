@@ -1,4 +1,70 @@
 # Personal notes
 
 ### Starting off, what even IS a RESTful API?
-A RESTful API is defined by certain architectural constraints. Note that REST stands for Representational State Transfer. What characterizes a REST API? This is really outside the scop
+A RESTful API is defined by certain architectural constraints. Note that REST stands for Representational State Transfer. What characterizes a REST API? This is really outside the scope of this specific vault, but we'll keep a peripheral reading section for it anyway. [[RESTful APIs]]
+
+### Okay, let's get started
+
+I'm just going to dump the full code here:
+
+```go
+package main
+
+import (
+	"net/http"
+
+	"github.com/gin-gonic/gin"
+)
+
+type album struct {
+	ID     string  `json:"id"`
+	Title  string  `json:"title"`
+	Artist string  `json:"artist"`
+	Price  float64 `json:"price"`
+}
+
+var albums = []album{
+	{ID: "1", Title: "X", Artist: "Ed Sheeran", Price: 34.66},
+	{ID: "2", Title: "In a perfect world", Artist: "Kodaline", Price: 29.99},
+	{ID: "3", Title: "Montevallo", Artist: "Sam Hunt", Price: 29.99},
+}
+
+func getAlbums(c *gin.Context) {
+	c.IndentedJSON(http.StatusOK, albums)
+}
+
+func postAlbums(c *gin.Context) {
+	var newAlbum album
+	if err := c.BindJSON(&newAlbum); err != nil {
+		return
+	}
+
+	albums = append(albums, newAlbum)
+	c.IndentedJSON(http.StatusCreated, newAlbum)
+}
+
+func getAlbumByID(c *gin.Context) {
+	id := c.Param("id")
+	for _, album := range albums {
+		if album.ID == id {
+			c.IndentedJSON(http.StatusOK, album)
+			return
+		}
+	}
+	c.IndentedJSON(http.StatusNotFound, gin.H{"message": "album not found"})
+}
+
+func main() {
+	router := gin.Default()
+	router.GET("/albums", getAlbums)
+	router.GET("/albums/:id", getAlbumByID)
+	router.POST("/albums", postAlbums)
+	router.Run("localhost:8080")
+}
+
+```
+
+As we have so far, we'll start off the top and work our way down.
+
+**Code anatomy**
+The first thing we notice is the 
