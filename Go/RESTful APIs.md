@@ -12,3 +12,5 @@ So what defines a RESTful API?
 6. An optional thing is to be able to send code. This code should only be run on demand.
 
 More hands-on stuff: [REST API concepts and examples - YouTube](https://www.youtube.com/watch?v=7YcW25PHnAA)
+
+Tags: #go, #backend, #rest-api, #peripheral-reading 
