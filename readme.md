@@ -1,4 +1,4 @@
-A quick 
+**NOTE: To get started on Obsidian, go to the `Go motherthread.md` file **
 
 ### This will be a quick guide into how to get this repository working, and how the workflow for it will look like.
 
