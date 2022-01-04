@@ -132,3 +132,18 @@ func postAlbums(c *gin.Context) {
 ```
 `err` won't die, but it's fine unless we're working on some very memory intensive task and these errors that are scoped to the function start becoming a performance issue. They generally won't, so this remains a convention issue. Other than that, we simply show the user that the new album has been added to the album list after appending it.
 
+`getAlbumByID`
+```go
+func getAlbumByID(c *gin.Context) {
+	id := c.Param("id")
+	for _, album := range albums {
+		if album.ID == id {
+			c.IndentedJSON(http.StatusOK, album)
+			return
+		}
+	}
+	c.IndentedJSON(http.StatusNotFound, gin.H{"message": "album not found"})
+}
+```
+
+Here, we assign `c.Par`
