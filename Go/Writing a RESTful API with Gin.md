@@ -117,4 +117,18 @@ if err := c.BindJSON(&newAlbum); err != nil {
 ```
 shows some consideration towards that end. The `err` variable is declared in a scope local to the `if` statement, and if it's found to be nil, the `c.BindJson(&newAlbum)` still assigns a new value to the contents of newAlbum, but the locally scoped `err` variable dies. 
 
-For the sake of readability, this block can actually be 
+For the sake of readability, this block can actually be written as
+```go
+func postAlbums(c *gin.Context) {
+	var newAlbum album
+	err := c.BindJSON(&newAlbum)
+	if err != nil {
+		return
+	}
+
+	albums = append(albums, newAlbum)
+	c.IndentedJSON(http.StatusCreated, newAlbum)
+}
+```
+`err` won't die, but it's fine unless we're working on some very memory intensive task and these errors that are scoped to the function start becoming a performance issue. They generally won't, so this remains a convention issue. Other than that, we simply show the user that the new album has been added to the album list after appending it.
+
