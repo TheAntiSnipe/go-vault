@@ -95,4 +95,18 @@ func getAlbums(c *gin.Context) {
 	c.IndentedJSON(http.StatusOK, albums)
 }
 ```
-The function accepts a variable c that is of type `*gin.Context`.  We'll be working with `gin.Context` quite a bit more in API design,  here's a docs source: [gin package - github.com/gin-gonic/gin - pkg.go.dev](https://pkg.go.dev/github.com/gin-gonic/gin#Context). For now, though, all we're doing with it is 
+The function accepts a variable c that is of type `*gin.Context`.  We'll be working with `gin.Context` quite a bit more in API design,  here's a docs source: [gin.Context](https://pkg.go.dev/github.com/gin-gonic/gin#Context). For now, though, all we're doing with it is we're shooting off an indented json packed into the response body as a response to the HTTP request, with an "ok" response and `albums` as the payload. [gin.Context.IndentedJSON](https://pkg.go.dev/github.com/gin-gonic/gin#Context.IndentedJSON)
+
+`postAlbums`
+```go
+func postAlbums(c *gin.Context) {
+	var newAlbum album
+	if err := c.BindJSON(&newAlbum); err != nil {
+		return
+	}
+
+	albums = append(albums, newAlbum)
+	c.IndentedJSON(http.StatusCreated, newAlbum)
+}
+```
+This is a bit more complex. 
