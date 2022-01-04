@@ -146,4 +146,6 @@ func getAlbumByID(c *gin.Context) {
 }
 ```
 
-Here, we assign `c.Par`
+Here, we assign `c.Param("id")` to the `id` variable. We'll see this parameter name in the `main()` function later. We then start a for loop and perform a lookup of each album number in albums. If we find it, we return the album that we found. If we don't find it, we return an error typed as a `map[string]interface{}`. [gin.H](https://pkg.go.dev/github.com/gin-gonic/gin#H)
+
+In the `main` function, we simply define a router and set up a gin.Default()
