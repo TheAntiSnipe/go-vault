@@ -11,4 +11,8 @@ This is very chaotic, I asked this question on the Go official Discord server an
 
 \- From @superfiend#4211 from the Discord server for Go.
 
+# Abandon all hope, ye who enter here
+[The Laws of Reflection - The Go Programming Language](https://go.dev/blog/laws-of-reflection)
+[govalidator/validator.go at master · asaskevich/govalidator · GitHub](https://github.com/asaskevich/govalidator/blob/master/validator.go#L1107)
+
 Tags: #go, #backend, #reflect, #wip, #esoterics

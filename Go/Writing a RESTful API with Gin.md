@@ -83,4 +83,6 @@ So this is a structure declaration, done in a similar way to C, but inverted in 
 ```go
 `json:"id"`
 ```
-part? Keeping it simple, it's called a struct tag. It maps the text you see here to input values. It is, however, a part of a freakin' massive rabbit hole in Go. I think I'll be approaching this later, but I'll still make a small note of this over here: [[reflect]]
+part? Keeping it simple, it's called a struct tag. It maps the text you see here to input values. How it is declared and how it works under the hood is, however, a part of a freakin' massive rabbit hole in Go. I think I'll be approaching this later, but I'll still make a small note of this over here: [[reflect]]
+
+With that out of the way, 
