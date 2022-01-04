@@ -109,4 +109,12 @@ func postAlbums(c *gin.Context) {
 	c.IndentedJSON(http.StatusCreated, newAlbum)
 }
 ```
-This is a bit more complex. 
+This is a bit more complex. Only because of how the `if` statement is handled, though. Go, like most langs, has the ideal of not polluting the global scope. The if statement here: 
+```go
+if err := c.BindJSON(&newAlbum); err != nil {
+		return
+	}
+```
+shows some consideration towards that end. The `err` variable is declared in a scope local to the `if` statement, and if it's found to be nil, the `c.BindJson(&newAlbum)` still assigns a new value to the contents of newAlbum, but the locally scoped `err` variable dies. 
+
+For the sake of readability, this block can actually be 
