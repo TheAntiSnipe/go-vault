@@ -9,6 +9,7 @@
 [[setting up tests]]
 [[Building and installation]]
 [[Writing a RESTful API with Gin]]
+[[Additional bits and pieces]]
 
 ## The API tutorial
 
