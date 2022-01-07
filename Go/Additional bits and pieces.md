@@ -33,3 +33,13 @@ func doThis(a, b, c int)(p, q, r int) {
 ```
 The naked return basicallly just sends back all the named returns.
 
+3. Another important rule in Go is that there can be no variables declared in the short syntax in the global scope. **Every statement in the global scope begins with a keyword.**
+```go
+a:=10 // Invalid!
+
+func main() {
+	a:=10 // Valid!
+}
+```
+
+4. 
