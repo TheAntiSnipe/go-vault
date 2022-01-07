@@ -57,4 +57,6 @@ var (
 
 7. `for` is Go's `while`
 
-8. 
+8. Variables declared in an `if` clause using the short declaration we saw in [[Writing a RESTful API with Gin]] (line 110) can also be freely used in the `else` clause.
+
+9. 
