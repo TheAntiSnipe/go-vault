@@ -65,6 +65,8 @@ var i, j int = 1, 2 // Valid syntax!
 var i, j = 1, 2 // Also valid!
 ```
 
+Also, [[some stuff about datatypes in Go]]
+
 Now what's `fmt.Sprintf`? Here's the reference I used to get the answer: [fmt package - fmt - pkg.go.dev](https://pkg.go.dev/fmt)
 Here's the short answer: It's the only one of the three functions that returns a string. The others write directly to a standard output and return error codes and byte lengths. For the long answer, check out [[fmt print routines]].
 

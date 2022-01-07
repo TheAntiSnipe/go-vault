@@ -42,4 +42,13 @@ func main() {
 }
 ```
 
-4. 
+4. There's a **"factoring syntax"** for datatypes in Go as well, just like there is one for library imports:
+```go
+var (
+	ToBe   bool       = false
+	MaxInt uint64     = 1<<64 - 1
+	z      complex128 = cmplx.Sqrt(-5 + 12i)
+)
+```
+
+5. **Go needs explicit conversions for variables. Don't forget.**

@@ -30,6 +30,9 @@
 ## REST
 [[RESTful APIs]]
 
+## Datatypes
+[[some stuff about datatypes in Go]]
+
 # Esoterics
 
 ## reflect
