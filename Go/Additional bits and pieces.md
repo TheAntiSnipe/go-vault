@@ -15,8 +15,21 @@ func doThis(a, b, c int) int {
 2. If you have multiple returns like that, they can also be treated the same way. Also, if you have named returns, you can send something called a naked return!
 **Eg:**
 ```go
-func doThis(a,b,c int) (p int, q int, r int) {
-	p:=a+b
-	q:=
+func doThis(a, b, c int) (p int, q int, r int) {
+	p = a + b
+	q = b + c
+	r = a + c
+	return p, q, r
 }
 ```
+can be written as:
+```go
+func doThis(a, b, c int)(p, q, r int) {
+	p = a + b
+	q = b + c
+	r = a + c
+	return
+}
+```
+The naked return basicallly just sends back all the named returns.
+
