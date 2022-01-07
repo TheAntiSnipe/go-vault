@@ -52,3 +52,9 @@ var (
 ```
 
 5. **Go needs explicit conversions for variables. Don't forget.**
+
+6. Also, remember that the `const` keyword exists in Go. Used in the same way as `var`.
+
+7. `for` is Go's `while`
+
+8. 
