@@ -16,3 +16,5 @@ The starting point the book picks, and the point I'll be starting from as well, 
 **So first off, what is that?**
 
 Let's break it down. A ***commit log*** is a log of transactions made successfully, as we've seen in databases.
+Now what is ***json over http***? Well, json is a very easily parseable format for data. Pretty much every modern programming language supports a json parser out of the box, or has convenient libs that allow us to parse it. http is a very universal data transfer protocol for data transfer over the web. json over http is basically the act of sending json formatted data using http.
+
