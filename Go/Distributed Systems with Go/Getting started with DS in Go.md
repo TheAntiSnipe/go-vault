@@ -11,3 +11,8 @@
 
 \- Travis Jeffery, *Distributed Services with Go*
 
+The starting point the book picks, and the point I'll be starting from as well, is to build something called a "commit log json over http service".
+
+**So first off, what is that?**
+
+Let's break it down. A ***commit log*** is a log of transactions made successfully, as we've seen in databases.
