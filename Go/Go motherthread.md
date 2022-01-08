@@ -9,7 +9,7 @@
 [[setting up tests]]
 [[Building and installation]]
 
-## The API tutorial
+## API tutorial
 [[Writing a RESTful API with Gin]]
 
 ## Building a distributed system in Go
