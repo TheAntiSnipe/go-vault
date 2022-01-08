@@ -8,11 +8,12 @@
 [[more functions, maps and iteration methods]]
 [[setting up tests]]
 [[Building and installation]]
-[[Writing a RESTful API with Gin]]
-[[Additional bits and pieces]]
 
 ## The API tutorial
+[[Writing a RESTful API with Gin]]
 
+## Building a distributed system in Go
+[[Go distributed systems motherthread]]
 
 # Peripheral reading
 ## fmt
@@ -32,6 +33,9 @@
 
 ## Datatypes
 [[some stuff about datatypes in Go]]
+
+## Misc stuff
+[[Additional bits and pieces]]
 
 # Esoterics
 
