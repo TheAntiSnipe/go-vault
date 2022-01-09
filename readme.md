@@ -1,4 +1,4 @@
-**NOTE: To get started on Obsidian, go to the `Go motherthread.md` file **
+**NOTE: To get started on Obsidian, go to the `Go motherthread.md` file**
 
 **Note #2: I'm now moving into distributed system specific topics. The book that'll be wikilinked into the distributed systems motherthread is with me and notto be included in the repo. If you get it, put it into a folder named `handwritten-and-pdf-references` since it's left untracked by .gitignore that way.**
 
