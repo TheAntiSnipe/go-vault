@@ -96,3 +96,11 @@ Okay, what's going on here? We know that Go doesn't look kindly upon global vars
 Well, this is called a "sentinel error". It's declared like this so that people using our lib can easily pull its value for comparison.
 
 > For people who call that function, they can easily check if the returned error is that value or not by using `err == yourpackage.ErrOffsetNotFound` (which is discouraged due to wrapping) or `errors.Is(err, yourpackage.ErrOffsetNotFound)`
+
+\- `hhhapz#8936`, Go discord server
+> It's for correct error checking, string eq doesn't always work correctly
+
+\- `_diamondburned_#4507`, Go discord server
+
+An example of sentinel errors in prod code: [io package - io - pkg.go.dev](https://pkg.go.dev/io@go1.17.5#pkg-variables)
+Further readi
