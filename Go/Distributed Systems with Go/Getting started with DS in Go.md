@@ -147,3 +147,5 @@ func (c *Log) Append(record Record) (uint64, error)
 Okay, we've never seen this specific way of declaring a function. What is this `c *Log` thingy in brackets behind the function name?
 
 Well, as we know, Go doesn't have the concept of classes. To allow for a function to be latched onto a struct, we use these things. They're called "methods on types". So basically, once someone creates a `Log` object, they can just do `objectname.Append()`.
+
+`c.mutex.Lock()` locks the current instance to prevent reads or writes while the operation is going on. `defer c.mutex.Unlock()` is a deferred unlock that happens once the current function has finished executing. Other than that, both the rest of the function and the rest of the remaining code is trivial.
