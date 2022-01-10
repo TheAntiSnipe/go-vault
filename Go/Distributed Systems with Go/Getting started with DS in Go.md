@@ -87,4 +87,12 @@ type Record struct {
 	Offset uint64 `json:"offset"`
 }
 ```
-Okay, so a `Record` struct is defined here. It contains byte data formatted value. Basically a slice of bytes ()
+Okay, so a `Record` struct is defined here. It contains byte data formatted value. Basically a slice of bytes (characters). Easy enough.
+
+```go
+var ErrOffsetNotFound = fmt.Errorf("offset not found")
+```
+Okay, what's going on here? We know that Go doesn't look kindly upon global vars, so what's up with this error declaration that (we'll see) is only referenced once in the entire codebase right now?
+Well, this is called a "sentinel error". It's declared like this so that people using our lib can easily pull its value for comparison.
+
+> For people who call that function, they can easily check if the returned error is that value or not by using `err == yourpackage.ErrOffsetNotFound` (which is discouraged due to wrapping) or `errors.Is(err, yourpackage.ErrOffsetNotFound)`
