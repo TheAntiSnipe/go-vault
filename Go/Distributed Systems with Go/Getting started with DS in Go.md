@@ -71,3 +71,20 @@ func (c *Log) Read(offset uint64) (Record, error) {
 
 **Code anatomy**
 What do we have going on here? First off, imports: The `server` package and the `sync` module make an appearance here. Like before, we'll be seeing more of these as we move along.
+
+Onto the main code! First, we have the `Log` struct:
+```go
+type Log struct {
+	mutex   sync.Mutex
+	records []Record
+}
+```
+It contains the `mutex` attribute, courtesy of the `sync` module's `sync.mutex`, and `records`, of type `[]Record`. This is basically a slice of records. Now what's a record? We see that in the next subsection.
+
+```go
+type Record struct {
+	Value  []byte `json:"value"`
+	Offset uint64 `json:"offset"`
+}
+```
+Okay, so a `Record` struct is defined here. It contains byte data formatted value. Basically a slice of bytes ()
