@@ -146,4 +146,4 @@ func (c *Log) Append(record Record) (uint64, error)
 ```
 Okay, we've never seen this specific way of declaring a function. What is this `c *Log` thingy in brackets behind the function name?
 
-Well, as we know, Go doesn't have the concept of classes. To allow for a function
+Well, as we know, Go doesn't have the concept of classes. To allow for a function to be latched onto a struct, we use these things. They're called 
