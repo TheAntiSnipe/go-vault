@@ -103,4 +103,47 @@ Well, this is called a "sentinel error". It's declared like this so that people 
 \- `_diamondburned_#4507`, Go discord server
 
 An example of sentinel errors in prod code: [io package - io - pkg.go.dev](https://pkg.go.dev/io@go1.17.5#pkg-variables)
-Further readi
+Further reading: [Constant errors | Dave Cheney](https://dave.cheney.net/2016/04/07/constant-errors)
+
+Next up! 
+
+```go
+func NewLog() *Log {
+	return &Log{}
+}
+
+func (c *Log) Append(record Record) (uint64, error) {
+	c.mutex.Lock()
+	defer c.mutex.Unlock()
+	record.Offset = uint64(len(c.records))
+	c.records = append(c.records, record)
+	return record.Offset, nil
+}
+
+func (c *Log) Read(offset uint64) (Record, error) {
+	c.mutex.Lock()
+	defer c.mutex.Unlock()
+	if offset >= uint64(len(c.records)) {
+		return Record{}, ErrOffsetNotFound
+	}
+	return c.records[offset], nil
+}
+```
+
+These three functions are going to be made open to users of the package. newLog simply instantiates an empty log, simple enough, 
+```go
+func (c *Log) Append(record Record) (uint64, error) {
+	c.mutex.Lock()
+	defer c.mutex.Unlock()
+	record.Offset = uint64(len(c.records))
+	c.records = append(c.records, record)
+	return record.Offset, nil
+}
+```
+simply appends-- Oh, wait, what's up with this syntax?
+```go
+func (c *Log) Append(record Record) (uint64, error)
+```
+Okay, we've never seen this specific way of declaring a function. What is this `c *Log` thingy in brackets behind the function name?
+
+Well, as we know,
