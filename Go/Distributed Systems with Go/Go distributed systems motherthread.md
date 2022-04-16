@@ -3,3 +3,4 @@
 
 # Index
 [[Getting started with DS in Go]]
+[[Multithreading and patterns]]
