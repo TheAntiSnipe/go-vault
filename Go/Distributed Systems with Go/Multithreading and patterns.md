@@ -56,4 +56,4 @@ func main() {
 Let's take it from the top.
 1. Two goroutines: Absolutely necessary, since you're doing two things at the same time.
 2. A channel (two in our case): Gotta talk to each other
-3. 
+3. A select-case pattern (?): Okay, why?
