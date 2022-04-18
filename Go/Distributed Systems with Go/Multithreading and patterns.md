@@ -66,3 +66,5 @@ Let's take it from the top.
 4. Overall, if we label the two anonymous functions as timeoutHandler and heartbeatListener respectively, both basically wait until:
 	A. heartbeatListener sends a response to timeoutHandler, thus restarting our for loop and our timer
 	B. timeoutHandler finishes first, then defining a behavior for what to do next.
+
+Cool, so now we have our race condition done!
