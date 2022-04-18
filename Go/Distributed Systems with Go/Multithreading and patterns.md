@@ -61,5 +61,8 @@ func main() {
 ```
 Let's take it from the top.
 1. Two goroutines: Absolutely necessary, since you're doing two things at the same time.
-2. A channel (two in our case): Gotta talk to each other
-3. A select-case pattern (?): Okay, why?
+2. Two buffered channels: Gotta talk to each other, cannot have deadlocks
+3. A select-case pattern: Okay, why? Well, what a select-case pattern does is, it operates depending on whatever output comes to it first.
+4. Overall, if we label the two anonymous functions as timeoutHandler and heartbeatListener respectively, both basically wait until:
+	A. heartbeatListener sends a response to timeoutHandler, thus restarting our for loop and our timer
+	B. timeoutHandler finishes first, then defining a behavior for what to do next.
