@@ -1,4 +1,4 @@
-# Personal notes
+ Personal notes
 ![[multithread-goal.jpeg]]
 The above is what I wanna achieve.
 
